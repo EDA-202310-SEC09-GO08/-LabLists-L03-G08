@@ -1,0 +1,58 @@
+Tomas Diaz
+a. ¿Cuáles son los mecanismos de interacción (I/O: Input/Output) que tiene el view.py 
+con el usuario? 
+El view.py es la parte del programa que interactúa con el usuario, esto quiere decir que 
+se encarga de las entradas al programa a través de la función input, y cuando el 
+programa desea mostrarle la función ya determinada o la respuesta que se está
+esperando envía un mensaje por medio de la función output, en otras palabras, muestra 
+en pantalla
+b. ¿Cómo se almacenan los datos de GoodReads en el model.py? 
+Los datos se terminan almacenando con la funcion newCatalog creando un diccionario 
+con llaves acorde a lo que muestra y de valor le crea una lista, de array o de single link. 
+En el caso del laboratorio, los libros y los tags se crearon con array list y los autores y 
+booktags fueron creados con single linked
+c. ¿Cuáles son las funciones que comunican el view.py y el model.py?
+El view se comunica con el usuario y el model hace todos los procesos que se estén
+pidiendo. El que comunica al view con el model es el controller, que tiene funciones 
+como la carga de datos, y en este caso, la carga de los tags, get book by author, sort 
+books.
+d. ¿Cuál es la función que permite crear una lista?, ¿Qué datos son necesarios? 
+es posible gracias al módulo disclt.adt y se llama la función específica es newlist. Solo 
+necesita la especificación del tipo de lista que se necesita crear. Adicionalmente, se crea 
+con los siguientes parámetros predeterminados cmpfunction=None,key=None, 
+filename=None,delimiter=",")
+e. ¿Para qué sirve el parámetro datastructure en la función newList()?,¿Cuáles son los
+posibles valores para este parámetro? 
+El parámetro de datastructure funciona para indicarle a newlist() que tipo de lista debe 
+crear, este puede implicar variables como “ARRAY_LIST”, “SINGLE_LINKED” o 
+“DOUBLE_LINKED” 
+f. ¿Para qué sirve el parámetro cmpfunction en la función newList()?
+Es una función predeterminada que está en función de crear una comparación en los 
+elementos de la lista, si no hay ninguna función de comparación se utiliza esta misma 
+función, si ya hay una función de comparación el key se convierte en None. 
+Adicionalmente, en los parametros se puede colocar dos elementos para que estos dos 
+se comparen a ellos.
+g. ¿Qué hace la función addLast()? 
+La función addLast() añade un elemento en la posición final de una lista, incrementando 
+su tamaño una unidad. En caso de tratarse de una lista enlazada se cambia el ultimo 
+nodo y se le da como referencia del siguiente dato el elemento agregado. El elemento 
+agregado tendría como referencia None al ser este el último de la lista.
+h. ¿Qué hace la función getElement()? 
+La función getElement() recorre una lista dada para encontrar la posición de un 
+elemento declarado como parámetro. La complejidad de esta función en caso de 
+tratarse de un array es O(1), mientras que en single es O(n).
+i. ¿Qué hace la función subList()?
+La función sablList() crea una lista compuesta de un elemento de una lista existente. El 
+tamaño de la lista creada y el elemento que se va a tomar de la lista inicial se especifica 
+en los parámetros de la función.
+j. Revise el uso de la función iterator() en las funciones printAuthorData(author) y 
+printBestBooks(books) en la Vista que aplican a una lista de libros. ¿Qué hace la función 
+iterator()? 
+La función iterator() identifica el tipo de lista que se está usando y recorre la lista hasta 
+que se le indique lo contrario.
+k. ¿Observó algún cambio en el comportamiento del programa al cambiar el valor del
+parámetro 'datastructure' en la creación de las listas?, explique con sus propias
+palabras los cambios que notó.
+Al cambiar el parámetro "datastructure" hay una alteración en el tiempo de ejecución 
+del programa debido a que se aumenta la complejidad del algoritmo. Esto se debe a que 
+se está usando un TAD menos eficiente para el manejo de los datos usados
